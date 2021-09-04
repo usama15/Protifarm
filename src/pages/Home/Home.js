@@ -6,7 +6,7 @@ import "./Home.css"
 
 export const Home = ({ navOpen }) => {
     return (
-        <div>
+        <div className="home">
             <Intro navOpen={navOpen} />
             <h1>Daily Prices of Chickens</h1>
             <div className="row">

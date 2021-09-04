@@ -11,19 +11,21 @@
     transform: translate(-50%, -50%);
 }
 
+.centered h2 {
+    color: white;
+}
+
 button {
     padding: 10px;
     margin: 10px;
-    width: 100px;
+    width: 120px;
     border-radius: 20px;
+    font-weight: bold;
+    background-color: rgb(80,255,64);
 }
 
-button:nth-child(even) {
-    background-color: black;
-}
-
-button:nth-child(odd) {
-    background-color: gray;
+button:hover {
+    background-color: rgb(9,255,0);
 }
 
 .navOpen {

@@ -4,7 +4,7 @@
     text-align: center;
     width: 100%;
     font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-    background-color: #AED6F1;
+    background-color: rgb(9,255,0);
 }
 
 #wrapper {
@@ -20,7 +20,7 @@
 #contact_form_div {
     width: 330px;
     padding: 10px;
-    background-color: rgb(33, 87, 122);
+    background-color: rgb(80,255,64);
     margin: 10px 320px;
 }
 
@@ -56,9 +56,9 @@
     border: none;
     border-radius: 2px;
     font-size: 17px;
-    background-color: #85C1E9;
-    border-bottom: 3px solid #3498DB;
-    color: #1B4F72;
+    background-color: rgb(9,255,0);
+    border-bottom: 3px solid rgb(80,255,64);
+    color: white;
     font-weight: bold;
 }
 

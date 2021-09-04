@@ -8,7 +8,7 @@ export const Footer = () => {
                 <div className="column-footer">
                     <h1>Thank You for visiting us</h1>
                     <h3>For more details Visit our<br />social media platforms</h3>
-                    <a href=""><i className="fab fa-facebook-f"></i></a>
+                   <a href=""><i className="fab fa-facebook-f"></i></a>
                     <a href=""><i className="fas fa-address-card"></i></a>
                     <a href=""><i className="fas fa-phone"></i></a>
                 </div>

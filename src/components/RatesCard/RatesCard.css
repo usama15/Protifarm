@@ -9,17 +9,22 @@
   width: 80%;
   margin: 10px 10%;
 }
+ 
+.card h3 {
+  color: rgb(80,255,64);
+}
 
 #rates-table td,#rates-table th {
   padding: 5px;
-  color: white;
   border: 1px solid black;
 }
 
 #rates-table tr:nth-child(even) {
-  background-color: black;
+  background-color: white;
+  color: rgb(80,255,64);
 }
 
 #rates-table tr:nth-child(odd) {
-  background-color: gray;
+  background-color: rgb(80,255,64);
+  color: white;
 }

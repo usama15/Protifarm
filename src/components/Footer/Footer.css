@@ -2,8 +2,14 @@ a {
     color: black;
 }
 
-a i {
+.column-footer i {
     margin: 10px 10px 0px 0px;
+    color: green;
+
+}
+
+.column-footer {
+    color: green;
 }
 
 .footer {

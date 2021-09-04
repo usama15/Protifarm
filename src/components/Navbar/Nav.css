@@ -10,10 +10,18 @@ body {
   font-family: montserrat;
 }
 
+li i {
+  margin: 10px 10px 0px 0px;
+}
+
 nav {
   background: white;
   height: 80px;
   width: 100%;
+}
+
+#nav-img {
+  margin-left: 30px;
 }
 
 label.logo {
@@ -22,6 +30,8 @@ label.logo {
   line-height: 80px;
   padding: 0 100px;
   font-weight: bold;
+  display: inline-block;
+  margin: -90px;
 }
 
 nav ul {
@@ -41,6 +51,13 @@ nav ul li span {
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav ul li span:hover {
+  color: white;
+  background-color: rgb(80,255,64,0.5);
+  border-radius: 30px;
 }
 
 .checkbtn {
@@ -60,7 +77,6 @@ nav ul li span {
 @media (max-width: 952px) {
   label.logo {
     font-size: 30px;
-    padding-left: 50px;
   }
   nav ul li span {
     font-size: 16px;

@@ -9,7 +9,7 @@ export const Intro = ({navOpen}) => {
         <div className={`introContainer ${navOpen ? 'navOpen':'introContainer'}`}>
             <img src={image} alt="Snow" style={{"width":"100%"}} />
             <div class="centered">
-                <h2>Welcome to Sindh Balchistan<br />Wholesaler Association</h2>
+                <h2>Welcome to Sindh Balochistan<br />Wholesaler Association</h2>
                 <button><Link to="/rates"><span>Check Rates</span></Link></button>
                 <button><Link to="/contact"><span>Contact</span></Link></button>
             </div>

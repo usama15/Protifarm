@@ -1,0 +1,25 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+#rates-table {
+  width: 80%;
+  margin: 10px 10%;
+}
+
+#rates-table td,#rates-table th {
+  padding: 5px;
+  color: white;
+  border: 1px solid black;
+}
+
+#rates-table tr:nth-child(even) {
+  background-color: black;
+}
+
+#rates-table tr:nth-child(odd) {
+  background-color: gray;
+}

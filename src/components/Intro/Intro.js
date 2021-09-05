@@ -8,7 +8,7 @@ export const Intro = ({navOpen}) => {
     console.log(navOpen);
     return (
         <div className={`introContainer ${navOpen ? 'navOpen':'introContainer'}`}>
-            <img src={image} alt="Snow" style={{"width":"100%"}} />
+            <img src={image} alt="Snow" style={{width:"100%"}} className='img' />
             <div class="centered">
                 <h2>Welcome to Sindh Balochistan<br />Wholesaler Association</h2>
                 <Button className='button' variant="outlined"><Link to="/rates"><span>Check Rates</span></Link></Button>

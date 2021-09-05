@@ -1,10 +1,10 @@
 import React from 'react';
 import './Nav.css';
 import MenuIcon from '@material-ui/icons/Menu';
-import image from "../../assets/image.png"
+import image from "../../assets/logo.png"
 
 import { Link } from 'react-router-dom'
-export default function Navbar({handleNavbar,navOpen}) {
+export default function NavBar({handleNavbar,navOpen}) {
     const navbarOpener = () => {
         handleNavbar();
     }
@@ -15,8 +15,8 @@ export default function Navbar({handleNavbar,navOpen}) {
             <label for="check" className="checkbtn" onClick={() => navbarOpener()}>
                 <MenuIcon/>
             </label>
-            <img src={image} id="nav-img" width="90" height="75" />
-            <span className="logo">SBWA</span>
+            <img src={image} id="nav-img" width="110" height="85" />
+            {/*<span className="logo">SBWA</span>*/}
             <ul>
                 <li><Link to="/"><span><i className="fas fa-home"/>Home</span></Link></li>
                 <li><Link to="/rates"><span><i className="fas fa-dollar-sign"/>Rates</span></Link></li>

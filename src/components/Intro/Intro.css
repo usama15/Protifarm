@@ -15,17 +15,17 @@
     color: white;
 }
 
-button {
-    padding: 10px;
-    margin: 10px;
-    width: 120px;
-    border-radius: 20px;
-    font-weight: bold;
-    background-color: rgb(80,255,64,0.5);
+.button {
+    padding: 10px!important;
+    margin: 10px!important;
+    width: 150px!important;
+    border-radius: 10px!important;
+    font-weight: bold!important;
+    background-color: rgba(24, 100, 18, 0.7) !important;
 }
 
-button:hover {
-    background-color: rgb(9,255,0);
+.button:hover {
+    background-color: rgb(101, 168, 99) !important;
 }
 
 .navOpen {

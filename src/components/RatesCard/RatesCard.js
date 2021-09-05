@@ -1,6 +1,7 @@
 import React from 'react'
 import "./RatesCard.css"
-
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
 export const RatesCard = ({date}) => {
     return (
         <div className="card">
@@ -12,7 +13,7 @@ export const RatesCard = ({date}) => {
                 </tr>
                 <tr>
                     <td>Karachi</td>
-                    <td>180 Rs</td>
+                    <td>Rs 180</td>
                 </tr>
                 <tr>
                     <td>Vindar</td>

@@ -1,6 +1,9 @@
 import React from 'react'
 import { Intro } from "../../components/Intro/Intro";
 import "./Contact.css"
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 
 export const Contact = ({ navOpen }) => {
     return (
@@ -12,11 +15,11 @@ export const Contact = ({ navOpen }) => {
                     <div id="contact_form_div">
                         <p id="contact_label">CONTACT  FORM</p>
                         <form>
-                            <p><input type="text" placeholder="Enter Name" /></p>
-                            <p><input type="text" placeholder="Enter Email" /></p>
-                            <p><input type="text" placeholder="Enter Contact No" /></p>
-                            <p><textarea placeholder="Enter Message"></textarea></p>
-                            <p><input type="submit" value="SUBMIT" /></p>
+
+                            <TextField className='input' id="outlined-basic" label="Enter Email" variant="outlined" />
+                            <TextField className='input' id="outlined-basic" label="Contact NO" variant="outlined" />
+                            <TextField className='input' id="outlined-basic" label="Message" variant="outlined" />
+                            <Button className='btn' color="primary"  variant="contained">Submit</Button>
                         </form>
                     </div>
                 </div>

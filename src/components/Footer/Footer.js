@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Footer.css"
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 export const Footer = () => {
     return (
@@ -15,13 +17,13 @@ export const Footer = () => {
                 <div className="column-footer">
                     <h1>Contact Us</h1>
                     <form>
-                        <table className="footer-table">
+                        <table border='0px' className="footer-table">
                             <tr>
                                 <td>
                                     <label>Name</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="Enter name" className="form-input" /><br />
+                                    <TextField className="form-input" id="outlined-basic" label="Name" variant="outlined" />
                                 </td>
                             </tr>
                             <tr>
@@ -29,7 +31,7 @@ export const Footer = () => {
                                     <label>Email</label>
                                 </td>
                                 <td>
-                                    <input type="email" placeholder="Enter email" className="form-input" /><br />
+                                    <TextField className="form-input" id="outlined-basic" label="Email" variant="outlined" />
                                 </td>
                             </tr>
                             <tr>
@@ -37,7 +39,7 @@ export const Footer = () => {
                                     <label>Contact</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="Enter contact" className="form-input" /><br />
+                                    <TextField className="form-input" id="outlined-basic" label="Contact" variant="outlined" />
                                 </td>
                             </tr>
                             <tr>
@@ -45,13 +47,12 @@ export const Footer = () => {
                                     <label>Message</label>
                                 </td>
                                 <td>
-                                    <textarea placeholder="Enter message" className="form-textarea"></textarea><br />
+                                    <TextField className="form-input" id="outlined-basic" label="Message" variant="outlined" />
                                 </td>
                             </tr>
                         </table>
-
-
-                        <input type="submit" value="Submit" id="submit" className="form-input" />
+                         <Button className='btn' color="primary"  variant="contained">Submit</Button>
+                        {/*<input type="submit" value="Submit" id="submit" className="form-input" />*/}
                     </form>
                 </div>
             </div>

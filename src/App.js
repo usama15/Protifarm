@@ -21,7 +21,7 @@ function App() {
   }
   return (
     <Router >
-      <MuiThemeProvider theme={theme}>
+      {/*<MuiThemeProvider theme={theme}>*/}
         <Navbar handleNavbar={handleNavbar}/>
         <Switch>
           <Route exact path='/'><Home navOpen={navOpen} /></Route>
@@ -29,7 +29,7 @@ function App() {
           <Route exact path='/contact' ><Contact navOpen={navOpen}/></Route>
         </Switch>
         <Footer />
-      </MuiThemeProvider>
+      {/*</MuiThemeProvider>*/}
     </Router>
   );
 }

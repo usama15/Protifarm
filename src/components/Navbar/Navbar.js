@@ -16,11 +16,11 @@ export default function Navbar({handleNavbar,navOpen}) {
                 <MenuIcon/>
             </label>
             <img src={image} id="nav-img" width="90" height="75" />
-            <label className="logo">SBWA</label>
+            <span className="logo">SBWA</span>
             <ul>
-                <li><Link to="/"><span><i className="fas fa-home"></i>Home</span></Link></li>
-                <li><Link to="/rates"><span><i className="fas fa-dollar-sign"></i>Rates</span></Link></li>
-                <li><Link to="/contact"><span><i className="fas fa-phone"></i>Contact</span></Link></li>
+                <li><Link to="/"><span><i className="fas fa-home"/>Home</span></Link></li>
+                <li><Link to="/rates"><span><i className="fas fa-dollar-sign"/>Rates</span></Link></li>
+                <li><Link to="/contact"><span><i className="fas fa-phone"/>Contact</span></Link></li>
             </ul>
         </nav>
     );

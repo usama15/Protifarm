@@ -2,6 +2,7 @@ import React from 'react';
 import "./Intro.css";
 import image from "../../assets/slide-1.jpg"
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 export const Intro = ({navOpen}) => {
     console.log(navOpen);
@@ -10,8 +11,8 @@ export const Intro = ({navOpen}) => {
             <img src={image} alt="Snow" style={{"width":"100%"}} />
             <div class="centered">
                 <h2>Welcome to Sindh Balochistan<br />Wholesaler Association</h2>
-                <button><Link to="/rates"><span>Check Rates</span></Link></button>
-                <button><Link to="/contact"><span>Contact</span></Link></button>
+                <Button className='button' variant="outlined"><Link to="/rates"><span>Check Rates</span></Link></Button>
+                <Button className='button' variant="outlined"><Link to="/contact"><span>Contact</span></Link></Button>
             </div>
         </div>
     )

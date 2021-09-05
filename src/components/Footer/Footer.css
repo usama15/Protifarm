@@ -4,12 +4,12 @@ a {
 
 .column-footer i {
     margin: 10px 10px 0px 0px;
-    color: green;
+    color: #0c0e0c;
 
 }
 
 .column-footer {
-    color: green;
+    color: #27911a;
 }
 
 .footer {
@@ -24,15 +24,13 @@ a {
 
 .column-footer {
     width: 50%;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
     text-align: center;
 }
 
 .form-input {
-    margin: 10px;
     border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.5);
-    height: 30px;
+    /*height: 30px;*/
 }
 
 .form-textarea {
@@ -41,9 +39,7 @@ a {
     background-color: rgba(128, 128, 128, 0.5);
 }
 
-.footer-table label {
-    margin: 10px;
-}
+
 
 .form-input:nth-child(4th) {
     height: 100px!important;

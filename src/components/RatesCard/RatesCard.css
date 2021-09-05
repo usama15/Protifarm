@@ -11,7 +11,7 @@
 }
  
 .card h3 {
-  color: rgb(80,255,64);
+  color: green;
 }
 
 #rates-table td,#rates-table th {
@@ -21,10 +21,8 @@
 
 #rates-table tr:nth-child(even) {
   background-color: white;
-  color: rgb(80,255,64);
 }
 
 #rates-table tr:nth-child(odd) {
   background-color: rgb(80,255,64);
-  color: white;
 }

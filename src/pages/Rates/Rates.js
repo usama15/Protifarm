@@ -6,7 +6,7 @@ export const Rates = ({navOpen}) => {
     return (
         <div>
             <Intro navOpen={navOpen}/>
-            <h1 style={{"textAlign":"center"}}>Daily Prices of Chicken of last 6 days</h1>
+            <h1 style={{"textAlign":"center","color":"green"}}>Daily Prices of Chicken of last 6 days</h1>
             <div className="row">
                 <div className="column">
                     <RatesCard date="4th September 2021" />

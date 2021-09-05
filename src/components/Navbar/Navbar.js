@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nav.css';
 import MenuIcon from '@material-ui/icons/Menu';
-import image from "../../assets/Screenshot 2021-09-04 232554.jpg"
+import image from "../../assets/image.png"
 
 import { Link } from 'react-router-dom'
 export default function Navbar({handleNavbar,navOpen}) {
@@ -15,7 +15,7 @@ export default function Navbar({handleNavbar,navOpen}) {
             <label for="check" className="checkbtn" onClick={() => navbarOpener()}>
                 <MenuIcon/>
             </label>
-            <img src={image} id="nav-img"/>
+            <img src={image} id="nav-img" width="90" height="75" />
             <label className="logo">SBWA</label>
             <ul>
                 <li><Link to="/"><span><i className="fas fa-home"></i>Home</span></Link></li>

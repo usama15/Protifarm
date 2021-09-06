@@ -13,6 +13,7 @@ import { Contact } from './pages/Contact/Contact';
 import { useState } from 'react';
 import { Footer } from './components/Footer/Footer';
 import Nav from './components/Navbar/NavBar.jsx'
+import { Intro } from './components/Intro/Intro';
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -23,14 +24,15 @@ function App() {
   return (
     <Router >
       {/*<MuiThemeProvider theme={theme}>*/}
-        <Navbar handleNavbar={handleNavbar}/>
-      {/*  <Nav handleNavbar={handleNavbar}/>*/}
-        <Switch>
-          <Route exact path='/'><Home navOpen={navOpen} /></Route>
-          <Route exact path='/rates'><Rates navOpen={navOpen} /></Route>
-          <Route exact path='/contact' ><Contact navOpen={navOpen}/></Route>
-        </Switch>
-        <Footer />
+      {/* <Navbar handleNavbar={handleNavbar}/> */}
+      <Nav hndleNavbar={handleNavbar} nvOpen={setNavOpen}/>
+      <Intro navOpen={navOpen} />
+      <Switch>
+        <Route exact path='/'><Home navOpen={navOpen} /></Route>
+        <Route exact path='/rates'><Rates navOpen={navOpen} /></Route>
+        <Route exact path='/contact' ><Contact navOpen={navOpen} /></Route>
+      </Switch>
+      <Footer />
       {/*</MuiThemeProvider>*/}
     </Router>
   );

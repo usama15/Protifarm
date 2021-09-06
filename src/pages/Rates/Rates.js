@@ -5,7 +5,6 @@ import {RatesCard} from "../../components/RatesCard/RatesCard";
 export const Rates = ({navOpen}) => {
     return (
         <div>
-            <Intro navOpen={navOpen}/>
             <h1 style={{"textAlign":"center","color":"green"}}>Daily Prices of Chicken of last 6 days</h1>
             <div className="row">
                 <div className="column">

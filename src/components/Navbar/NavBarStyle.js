@@ -1,5 +1,6 @@
 import { fade, makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { ImportantDevices } from '@material-ui/icons';
 
 export const useStyles = makeStyles((theme) => ({
 
@@ -10,15 +11,14 @@ export const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: theme.spacing(2),
         display: 'block',
+        color: "black",
         [theme.breakpoints.up('sm')]: {
             display: 'none',
-                    color:'black',
-
 
         },
     },
     title: {
-        display: 'none',
+        // display: 'none',
         [theme.breakpoints.up('sm')]: {
             display: 'block',
             color:'black',
@@ -65,7 +65,7 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flex: 1,
 
-        ['@media (max-width: 780px)']: {
+        ['@media (max-width: 599px)']: {
             backgroundColor: 'lightblue',
             // display: 'block',
             display: 'flex',
@@ -82,7 +82,7 @@ export const useStyles = makeStyles((theme) => ({
     listItem: {
         margin: '0px 30px',
 
-        ['@media (max-width: 780px)']: {
+        ['@media (max-width: 599px)']: {
             margin: '0px',
             width: '100%',
             display: 'flex',
@@ -97,7 +97,8 @@ export const useStyles = makeStyles((theme) => ({
     },
 
     linkText: {
-        ['@media (max-width: 780px)']: {
+        color: 'black',
+        ['@media (max-width: 599px)']: {
             fontSize: '30px',
             color: 'black',
             fontWeight: 'bold',
@@ -115,7 +116,7 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flex: 1,
 
-        ['@media (max-width: 780px)']: {
+        ['@media (max-width: 599px)']: {
             backgroundColor: 'lightblue',
             // display: 'block',
             display: 'flex',

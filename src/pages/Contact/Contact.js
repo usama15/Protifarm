@@ -8,7 +8,6 @@ import Button from '@material-ui/core/Button';
 export const Contact = ({ navOpen }) => {
     return (
         <div>
-            <Intro navOpen={navOpen} />
             <div className="form-wrapper">
                 <div id="wrapper">
 

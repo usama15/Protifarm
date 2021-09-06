@@ -12,6 +12,7 @@ import {
   ListItemText
 } from '@material-ui/core';
 
+import image from "../../assets/logo.png"
 import './Nav.css'
 
 import MenuIcon from '@material-ui/icons/Menu';
@@ -21,7 +22,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import { useStyles } from './NavBarStyle';
 import { Link } from 'react-router-dom'
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar({ hndleNavbar,nvOpen }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -116,77 +117,39 @@ export default function PrimarySearchAppBar() {
             aria-label="open drawer"
           >
             <MenuIcon
-              onClick={handleNavbar}
+              onClick={() => { handleNavbar(); hndleNavbar(); }}
             />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            <img src={image} width="100" height="68"/>
           </Typography>
+
+          <div className={classes.grow} />
           <div>
             <List
               className={`${navOpen ? `${classes.listItemsActive}` : `${classes.listItems}`}`}
             >
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText}>Home</ListItemText>
+                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><i className="fas fa-home icon"/>Home</ListItemText>
                 </Link>
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
-                <Link to="/about" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText}>About</ListItemText>
-                </Link>
-              </ListItemText>
-              <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
-                <Link to="/shop" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText}>Shop</ListItemText>
+                <Link to="/rates" className={classes.listItemLink}>
+                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><i className="fas fa-dollar-sign icon"/>Rates</ListItemText>
                 </Link>
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/contact" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText}>Contact</ListItemText>
+                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><i className="fas fa-phone icon"/>Contact</ListItemText>
                 </Link>
               </ListItemText>
             </List>
           </div>
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
-                <Link to="/contact" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText}>Login</ListItemText>
-                </Link>
-              </ListItemText>
-              {/*<AccountCircle />*/}
-            </IconButton>
-             <IconButton aria-label="show 1 new notifications" color="inherit">
-              <Badge badgeContent={1} color="secondary">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
-      { renderMobileMenu}
-      { renderMenu}
+        </Toolbar >
+      </AppBar >
+      {renderMobileMenu}
+      {renderMenu}
     </div >
   );
 }

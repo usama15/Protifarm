@@ -1,73 +1,67 @@
 import React from 'react'
 import "./RatesCard.css"
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-export const RatesCard = ({date}) => {
+import Paper from '@material-ui/core/Paper';
+
+const useStyles = makeStyles({
+    table: {
+        minWidth: 300,
+    },
+});
+
+function createData(city, rate) {
+    return { city, rate };
+}
+
+const rows = [
+    createData('Karachi', 180),
+    createData('Vindar', 180),
+    createData('Sajawal', 178),
+    createData('Golarchi', 177),
+    createData('Hyderabad', 178),
+    createData('Tando Allahyar', 177),
+    createData('Mirpur Khas', 176),
+    createData('Nawab Shah', 176),
+    createData('Sanghar', 176),
+    createData('S.P. Chakkar', 176),
+    createData('Digri', 175),
+    createData('Khipro', 174),
+    createData('Samaro', 174),
+    createData('Kunri', 174),
+
+];
+
+export const RatesCard = ({ date }) => {
+    const classes = useStyles();
     return (
         <div className="card">
             <h3>Date: {date}</h3>
-            <table border="1" id="rates-table">
-                <tr>
-                    <th>City</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Karachi</td>
-                    <td>Rs 180</td>
-                </tr>
-                <tr>
-                    <td>Vindar</td>
-                    <td>180 Rs</td>
-                </tr>
-                <tr>
-                    <td>Sujawal</td>
-                    <td>178 Rs</td>
-                </tr>
-                <tr>
-                    <td>Golarchi</td>
-                    <td>177 Rs</td>
-                </tr>
-                <tr>
-                    <td>Hyderabad</td>
-                    <td>178 Rs</td>
-                </tr>
-                <tr>
-                    <td>Tando Allahyar</td>
-                    <td>177 Rs</td>
-                </tr>
-                <tr>
-                    <td>Mirpur Khas</td>
-                    <td>176 Rs</td>
-                </tr>
-                <tr>
-                    <td>Nawab Shah</td>
-                    <td>176 Rs</td>
-                </tr>
-                <tr>
-                    <td>Sanghar</td>
-                    <td>176 Rs</td>
-                </tr>
-                <tr>
-                    <td>S.P. Chakkar</td>
-                    <td>176 Rs</td>
-                </tr>
-                <tr>
-                    <td>Digri</td>
-                    <td>175 Rs</td>
-                </tr>
-                <tr>
-                    <td>Khipro</td>
-                    <td>174 Rs</td>
-                </tr>
-                <tr>
-                    <td>Samaro</td>
-                    <td>174 Rs</td>
-                </tr>
-                <tr>
-                    <td>Kunri</td>
-                    <td>174 Rs</td>
-                </tr>
-            </table>
+            <TableContainer component={Paper} style={{"marginTop": "10px"}}>
+                <Table className={classes.table} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>City</TableCell>
+                            <TableCell align="right">Rates(Rs)</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {rows.map((row) => (
+                            <TableRow key={row.name}>
+                                <TableCell component="th" scope="row">
+                                    {row.city}
+                                </TableCell>
+                                <TableCell align="right">{row.rate}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
         </div>
     )
 }

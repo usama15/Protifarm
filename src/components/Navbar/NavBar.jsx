@@ -117,6 +117,7 @@ export default function PrimarySearchAppBar({ hndleNavbar,nvOpen }) {
             aria-label="open drawer"
           >
             <MenuIcon
+              className={classes.menu}
               onClick={() => { handleNavbar(); hndleNavbar(); }}
             />
           </IconButton>
@@ -131,17 +132,17 @@ export default function PrimarySearchAppBar({ hndleNavbar,nvOpen }) {
             >
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><i className="fas fa-home icon"/>Home</ListItemText>
+                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-home icon"/>Home</Typography></ListItemText>
                 </Link>
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/rates" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><i className="fas fa-dollar-sign icon"/>Rates</ListItemText>
+                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-dollar-sign icon"/>Rates</Typography></ListItemText>
                 </Link>
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/contact" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><i className="fas fa-phone icon"/>Contact</ListItemText>
+                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-phone icon"/>Contact</Typography></ListItemText>
                 </Link>
               </ListItemText>
             </List>

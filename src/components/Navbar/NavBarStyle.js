@@ -3,7 +3,9 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { ImportantDevices } from '@material-ui/icons';
 
 export const useStyles = makeStyles((theme) => ({
-
+    menu: {
+        color: "black",
+    },
     grow: {
         flexGrow: 1,
         height: '10vh',
@@ -11,7 +13,6 @@ export const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: theme.spacing(2),
         display: 'block',
-        color: "black",
         [theme.breakpoints.up('sm')]: {
             display: 'none',
 

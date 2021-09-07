@@ -11,7 +11,7 @@
     transform: translate(-50%, -50%);
 }
 
-.centered h2 {
+.centered h1 {
     color: white;
 }
 
@@ -37,22 +37,22 @@ span {
 }
 
 @media screen and (max-width: 550px) {
-    .centered h2 {
-        font-size: 1.25em!important;
+    .centered h1 {
+        font-size: 1.50em!important;
     }
     button {
         padding: 7.5px;
         margin: 7.5px;
     }
       .img{
-        height: 200px!important;
+        height: 250px!important;
         width: 100% !important;
 
     }
 }
 
 @media screen and (max-width: 450px) {
-    .centered h2 {
+    .centered h1 {
         font-size: 1em!important;
     }
     .button {
@@ -67,8 +67,8 @@ span {
 }
 
 @media screen and (max-width: 360px) {
-    .centered h2 {
-        font-size: 0.75em!important;
+    .centered h1 {
+        font-size: 1.25em!important;
     }
     .button {
         padding: 1px;
@@ -76,7 +76,7 @@ span {
         width: 130px!important;
     }
     .img{
-        height: 200px!important;
+        height: 250px!important;
         width: 100% !important;
 
     }

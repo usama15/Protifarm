@@ -20,20 +20,21 @@ function createData(city, rate) {
 }
 
 const rows = [
-    createData('Karachi', 180),
-    createData('Vindar', 180),
-    createData('Sajawal', 178),
-    createData('Golarchi', 177),
-    createData('Hyderabad', 178),
-    createData('Tando Allahyar', 177),
-    createData('Mirpur Khas', 176),
-    createData('Nawab Shah', 176),
-    createData('Sanghar', 176),
-    createData('S.P. Chakkar', 176),
-    createData('Digri', 175),
-    createData('Khipro', 174),
-    createData('Samaro', 174),
-    createData('Kunri', 174),
+    createData('Karachi', 214),
+    createData('Vindar', 214),
+    createData('Sajawal', 214),
+    createData('Golarchi', 211),
+    createData('Hyderabad', 210),
+    createData('Badin', 209),
+    createData('T.ALLHAYAR', 209),
+    createData('M. P. KHAS.', 210),
+    createData('NAWAB SHAH ', 210),
+    createData('SANGHAR.', 210),
+    createData('S. P. CHAKAR ', 210),
+    createData('Digri', 209),
+    createData('Khipro', 208),
+    createData('Samaro', 208),
+    createData('Kunri', 208),
 
 ];
 

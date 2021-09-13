@@ -1,33 +1,160 @@
 import React from 'react';
-import {Intro} from "../../components/Intro/Intro";
-import {RatesCard} from "../../components/RatesCard/RatesCard";
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+import fb from "../../config/firebase";
+import RemoveIcon from '@material-ui/icons/Delete';
+import IconButton from '@material-ui/core/IconButton';
 
-export const Rates = ({navOpen}) => {
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 150,
+  },
+    main:{
+      width:'62%',
+        marginLeft:'15%',
+
+
+    },
+
+    tb:{
+      marginTop:'5%',
+        marginBottom:'5%',
+    },
+
+});
+
+
+function Rates(props) {
+          const classes = useStyles();
+          const [post , setPost] = React.useState([])
+     React.useEffect(() => {
+      fb.firestore().collection('rates').onSnapshot((snapshot) => {
+          const newPost = snapshot.docs.map((doc) => ({
+              id: doc.id,
+              ...doc.data()
+          }))
+          setPost(newPost)
+
+      })
+     },[])
+    const data = post.sort((a, b) => (a.date < b.date) ? 1 : -1);
+
     return (
-        <div>
-            <h1 style={{"textAlign":"center","color":"green"}}>Daily Prices of Chicken of last 6 days</h1>
-            <div className="row">
-                <div className="column">
-                    <RatesCard date="4th September 2021" />
-                </div>
-                <div className="column">
-                    <RatesCard date="3rd September 2021" />
-                </div>
-                <div className="column">
-                    <RatesCard date="2nd September 2021" />
-                </div>
-            </div>
-            <div className="row">
-                <div className="column">
-                    <RatesCard date="1st September 2021" />
-                </div>
-                <div className="column">
-                    <RatesCard date="31st August 2021" />
-                </div>
-                <div className="column">
-                    <RatesCard date="30th August 2021" />
-                </div>
-            </div>
+        <div className={classes.main}>
+            {data.map ((data) => (
+            <TableContainer className={classes.tb} component={Paper}>
+      <Table className={classes.table} aria-label="simple table">
+          <TableHead>
+          <TableRow>
+            <TableCell align='left' >{data.date}</TableCell>
+              <TableCell align='center'/>
+          </TableRow>
+        </TableHead>
+        <TableHead>
+          <TableRow>
+            <TableCell align="left">City Name</TableCell>
+            <TableCell align="right">Rates</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+            <TableRow>
+                <TableCell align='left'>
+                    KARACHI
+                </TableCell>
+                <TableCell align='right'>{data.karachi}</TableCell>
+            </TableRow>
+              <TableRow>
+                <TableCell align='left'>
+                    VINDER
+                </TableCell>
+                <TableCell align='right'>{data.vinder}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell align='left'>
+                    SUJAWAL
+                </TableCell>
+                <TableCell align='right'>{data.sujawal}</TableCell>
+              </TableRow>
+             <TableRow>
+                <TableCell align='left'>
+                    GOLARCHI
+                </TableCell>
+                <TableCell align='right'>{data.golarchi}</TableCell>
+              </TableRow>
+             <TableRow>
+                <TableCell align='left'>
+                    HYDERABAD
+                </TableCell>
+                <TableCell align='right'>{data.hyderabad}</TableCell>
+              </TableRow>
+             <TableRow>
+                <TableCell align='left'>
+                    BADIN
+                </TableCell>
+                <TableCell align='right'>{data.badin}</TableCell>
+              </TableRow>
+             <TableRow>
+                <TableCell align='left'>
+                    T.ALLHAYAR
+                </TableCell>
+                <TableCell align='right'>{data.tallhayar}</TableCell>
+              </TableRow>
+             <TableRow>
+                <TableCell align='left'>
+                    M. P. KHAS
+                </TableCell>
+                <TableCell align='right'>{data.mpkhas}</TableCell>
+              </TableRow>
+             <TableRow>
+                <TableCell align='left'>
+                    NAWAB SHAH
+                </TableCell>
+                <TableCell align='right'>{data.nawabshah}</TableCell>
+              </TableRow>
+             <TableRow>
+                <TableCell align='left'>
+                    S. P. CHAKAR
+                </TableCell>
+                <TableCell align='right'>{data.spchakar}</TableCell>
+              </TableRow>
+            <TableRow>
+                <TableCell align='left'>
+                  DIGRI
+                </TableCell>
+                <TableCell align='right'>{data.digri}</TableCell>
+              </TableRow>
+            <TableRow>
+                <TableCell align='left'>
+                    KHIPRO
+                </TableCell>
+                <TableCell align='right'>{data.khipro}</TableCell>
+              </TableRow>
+            <TableRow>
+                <TableCell align='left'>
+                    SAMARO
+                </TableCell>
+                <TableCell align='right'>{data.samaro}</TableCell>
+              </TableRow>
+            <TableRow>
+                <TableCell align='left'>
+                    KUNRI
+                </TableCell>
+                <TableCell align='right'>{data.kunri}</TableCell>
+              </TableRow>
+
+        </TableBody>
+      </Table>
+    </TableContainer>
+            ))}
         </div>
-    )
+    );
 }
+
+export default Rates;

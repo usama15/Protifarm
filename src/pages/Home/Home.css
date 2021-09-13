@@ -25,10 +25,7 @@ body {
 /* Float four columns side by side */
 
 .column {
-    /*float: ;*/
-    /*width: 33%;*/
     padding: 0 10px;
-    /*margin-left: 200px;*/
 }
 
 /* Remove extra left and right margins, due to padding */

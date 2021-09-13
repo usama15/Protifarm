@@ -8,7 +8,7 @@ import { MuiThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 import Navbar from './components/Navbar/Nav';
 import { Home } from './pages/Home/Home';
-import { Rates } from './pages/Rates/Rates';
+import  Rates  from './pages/Rates/Rates';
 import { Contact } from './pages/Contact/Contact';
 import { useState } from 'react';
 import { Footer } from './components/Footer/Footer';

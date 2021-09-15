@@ -67,9 +67,8 @@ export const useStyles = makeStyles((theme) => ({
         flex: 1,
 
         ['@media (max-width: 599px)']: {
-            backgroundColor: 'lightblue',
-            // display: 'block',
-            display: 'flex',
+            backgroundColor: 'white',
+            display: 'inline',
             flexDirection: 'column',
             height: '87.5vh',
             position: 'fixed',
@@ -117,18 +116,19 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flex: 1,
 
+
         ['@media (max-width: 599px)']: {
-            backgroundColor: 'lightblue',
-            // display: 'block',
-            display: 'flex',
+            backgroundColor: 'white',
+            display: 'inline',
             flexDirection: 'column',
             height: '87.5vh',
-            position: 'fixed',
+            position: 'absolute',
             top: '10vh',
             width: '100%',
             left: 0,
             transform: 'translateY(0)',
             transition: 'all 0.5s ease-in-out'
+
         }
     },
 }));

@@ -1,7 +1,7 @@
 {
   "homepage": "https://usama15.github.io/Protifarm/",
   "name": "farm-website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",

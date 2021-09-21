@@ -4,9 +4,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { MuiThemeProvider } from "@material-ui/core";
-import theme from "./theme";
-import Navbar from './components/Navbar/Nav';
 import { Home } from './pages/Home/Home';
 import  Rates  from './pages/Rates/Rates';
 import { Contact } from './pages/Contact/Contact';
@@ -23,8 +20,6 @@ function App() {
   }
   return (
     <Router >
-      {/*<MuiThemeProvider theme={theme}>*/}
-      {/* <Navbar handleNavbar={handleNavbar}/> */}
       <Nav hndleNavbar={handleNavbar} nvOpen={setNavOpen}/>
       <Intro navOpen={navOpen} />
       <Switch>
@@ -33,7 +28,6 @@ function App() {
         <Route exact path='/contact' ><Contact navOpen={navOpen} /></Route>
       </Switch>
       <Footer />
-      {/*</MuiThemeProvider>*/}
     </Router>
   );
 }

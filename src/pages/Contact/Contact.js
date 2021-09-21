@@ -1,5 +1,4 @@
 import React from 'react'
-import { Intro } from "../../components/Intro/Intro";
 import "./Contact.css"
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';

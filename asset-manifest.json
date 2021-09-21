@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Protifarm/static/css/main.7e14b4b0.chunk.css",
+    "main.js": "/Protifarm/static/js/main.e0a8ad07.chunk.js",
+    "main.js.map": "/Protifarm/static/js/main.e0a8ad07.chunk.js.map",
+    "runtime-main.js": "/Protifarm/static/js/runtime-main.d381dc06.js",
+    "runtime-main.js.map": "/Protifarm/static/js/runtime-main.d381dc06.js.map",
+    "static/js/2.77df7ef5.chunk.js": "/Protifarm/static/js/2.77df7ef5.chunk.js",
+    "static/js/2.77df7ef5.chunk.js.map": "/Protifarm/static/js/2.77df7ef5.chunk.js.map",
+    "static/js/3.b507828f.chunk.js": "/Protifarm/static/js/3.b507828f.chunk.js",
+    "static/js/3.b507828f.chunk.js.map": "/Protifarm/static/js/3.b507828f.chunk.js.map",
+    "index.html": "/Protifarm/index.html",
+    "static/css/main.7e14b4b0.chunk.css.map": "/Protifarm/static/css/main.7e14b4b0.chunk.css.map",
+    "static/js/2.77df7ef5.chunk.js.LICENSE.txt": "/Protifarm/static/js/2.77df7ef5.chunk.js.LICENSE.txt",
+    "static/media/logo.9d1ed450.png": "/Protifarm/static/media/logo.9d1ed450.png",
+    "static/media/slide-1.d53d0627.jpg": "/Protifarm/static/media/slide-1.d53d0627.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d381dc06.js",
+    "static/js/2.77df7ef5.chunk.js",
+    "static/css/main.7e14b4b0.chunk.css",
+    "static/js/main.e0a8ad07.chunk.js"
+  ]
+}

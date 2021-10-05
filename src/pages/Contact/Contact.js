@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import fb from '../../config/firebase'
 
-export const Contact = ({ navOpen }) => {
+export const Contact = () => {
     const [email, setEmail] = React.useState('');
     const [contact, setContact] = React.useState('');
     const [message, setMessage] = React.useState('');

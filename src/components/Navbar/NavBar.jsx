@@ -22,7 +22,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import { useStyles } from './NavBarStyle';
 import { Link } from 'react-router-dom'
 
-export default function PrimarySearchAppBar({ hndleNavbar,nvOpen }) {
+export default function PrimarySearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -118,31 +118,31 @@ export default function PrimarySearchAppBar({ hndleNavbar,nvOpen }) {
           >
             <MenuIcon
               className={classes.menu}
-              onClick={() => { handleNavbar(); hndleNavbar(); }}
+              onClick={() => { handleNavbar();}}
             />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             <img src={image} width="100" height="68"/>
           </Typography>
 
-          <div className={classes.grow} />
+          {/* <div className={classes.grow} /> */}
           <div>
             <List
-              className={`${navOpen ? `${classes.listItemsActive}` : `${classes.listItems}`}`}
+              className={`navbar ${navOpen ? `${classes.listItemsActive}` : `${classes.listItems}`}`}
             >
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-home icon"/>Home</Typography></ListItemText>
+                  <ListItemText className={classes.linkText} id="home"><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-home icon"/>Home</Typography></ListItemText>
                 </Link>
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/rates" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-dollar-sign icon"/>Rates</Typography></ListItemText>
+                  <ListItemText className={classes.linkText} id="about"><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-dollar-sign icon"/>Rates</Typography></ListItemText>
                 </Link>
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/contact" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} onClick={() => nvOpen(false)}><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-phone icon"/>Contact</Typography></ListItemText>
+                  <ListItemText className={classes.linkText} id="contact"><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-phone icon"/>Contact</Typography></ListItemText>
                 </Link>
               </ListItemText>
             </List>

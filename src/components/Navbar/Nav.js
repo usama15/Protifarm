@@ -11,17 +11,7 @@ export default function NavBar({handleNavbar,navOpen}) {
 
     return (
         <nav>
-            <input type="checkbox" id="check" />
-            <label for="check" className="checkbtn" onClick={() => navbarOpener()}>
-                <MenuIcon/>
-            </label>
-            <img src={image} id="nav-img" width="110" height="85" />
-            {/*<span className="logo">SBWA</span>*/}
-            <ul>
-                <li><Link to="/"><span><i className="fas fa-home"/>Home</span></Link></li>
-                <li><Link to="/rates"><span><i className="fas fa-dollar-sign"/>Rates</span></Link></li>
-                <li><Link to="/contact"><span><i className="fas fa-phone"/>Contact</span></Link></li>
-            </ul>
+            
         </nav>
     );
 }

@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Intro } from '../../components/Intro/Intro.js'
+import { Footer } from '../../components/Footer/Footer';
 import  RatesCard  from '../../components/RatesCard/RatesCard.js'
 import "./Home.css"
 
-export const Home = ({ navOpen }) => {
+export const Home = () => {
     return (
         <div className="home">
             <h1>Daily Prices of Chickens</h1>
@@ -20,6 +21,8 @@ export const Home = ({ navOpen }) => {
                 {/*</div>*/}
             </div>
             <p>For more previous rates,<Link to="/rates"><span>Click here</span></Link></p>
+      <Footer />
+
         </div>
     )
 }

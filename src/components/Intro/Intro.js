@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Intro.css";
-import image from "../../assets/slide-1.jpg"
+import image from "../../assets/back.jpg"
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 

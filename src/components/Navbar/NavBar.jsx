@@ -122,7 +122,7 @@ export default function PrimarySearchAppBar() {
             />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            <img src={image} width="100" height="68"/>
+            <img src={image} width="80" height="68"/>
           </Typography>
 
           {/* <div className={classes.grow} /> */}

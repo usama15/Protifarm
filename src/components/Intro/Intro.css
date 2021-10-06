@@ -53,14 +53,14 @@ span {
 
 @media screen and (max-width: 450px) {
     .centered h1 {
-        font-size: 1em!important;
+        font-size: 1.5em!important;
     }
     .button {
         padding: 5px;
         margin: 5px;
     }
     .img{
-        height: 200px!important;
+        height: 270px!important;
         width: 100% !important;
 
     }
@@ -68,7 +68,7 @@ span {
 
 @media screen and (max-width: 360px) {
     .centered h1 {
-        font-size: 1.25em!important;
+        font-size: 1.50em!important;
     }
     .button {
         padding: 1px;
@@ -76,7 +76,7 @@ span {
         width: 130px!important;
     }
     .img{
-        height: 250px!important;
+        height: 300px!important;
         width: 100% !important;
 
     }

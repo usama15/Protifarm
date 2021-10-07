@@ -24,6 +24,10 @@ const useStyles = makeStyles({
   tb: {
     marginTop: "5%",
     marginBottom: "5%",
+   
+  },
+  cell:{
+    fontWeight:'bold',
   },
 });
 
@@ -51,72 +55,72 @@ function Rates() {
           <Table className={classes.table} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell align="left">{data.date}</TableCell>
-                <TableCell align="center" />
+                <TableCell className={classes.cell} align="left">{data.date}</TableCell>
+                <TableCell className={classes.cell} align="right">{data.type}</TableCell>
               </TableRow>
             </TableHead>
             <TableHead>
               <TableRow>
-                <TableCell align="left">City Name</TableCell>
-                <TableCell align="right">Rates</TableCell>
+                <TableCell className={classes.cell} align="left">City Name</TableCell>
+                <TableCell className={classes.cell} align="right">Rates</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell align="left">KARACHI</TableCell>
-                <TableCell align="right">{data.karachi}</TableCell>
+                <TableCell className={classes.cell} align="left">KARACHI</TableCell>
+                <TableCell className={classes.cell} align="right">{data.karachi}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">VINDER</TableCell>
-                <TableCell align="right">{data.vinder}</TableCell>
+                <TableCell className={classes.cell} align="left">VINDER</TableCell>
+                <TableCell className={classes.cell} align="right">{data.vinder}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">SUJAWAL</TableCell>
-                <TableCell align="right">{data.sujawal}</TableCell>
+                <TableCell  className={classes.cell}align="left">SUJAWAL</TableCell>
+                <TableCell  className={classes.cell}align="right">{data.sujawal}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">GOLARCHI</TableCell>
-                <TableCell align="right">{data.golarchi}</TableCell>
+                <TableCell className={classes.cell} align="left">GOLARCHI</TableCell>
+                <TableCell className={classes.cell} align="right">{data.golarchi}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">HYDERABAD</TableCell>
-                <TableCell align="right">{data.hyderabad}</TableCell>
+                <TableCell className={classes.cell} align="left">HYDERABAD</TableCell>
+                <TableCell className={classes.cell} align="right">{data.hyderabad}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">BADIN</TableCell>
-                <TableCell align="right">{data.badin}</TableCell>
+                <TableCell className={classes.cell} align="left">BADIN</TableCell>
+                <TableCell className={classes.cell} align="right">{data.badin}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">T.ALLHAYAR</TableCell>
-                <TableCell align="right">{data.tallhayar}</TableCell>
+                <TableCell className={classes.cell} align="left">T.ALLHAYAR</TableCell>
+                <TableCell className={classes.cell} align="right">{data.tallhayar}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">M. P. KHAS</TableCell>
-                <TableCell align="right">{data.mpkhas}</TableCell>
+                <TableCell className={classes.cell} align="left">M. P. KHAS</TableCell>
+                <TableCell className={classes.cell} align="right">{data.mpkhas}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">NAWAB SHAH</TableCell>
-                <TableCell align="right">{data.nawabshah}</TableCell>
+                <TableCell className={classes.cell} align="left">NAWAB SHAH</TableCell>
+                <TableCell className={classes.cell} align="right">{data.nawabshah}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">S. P. CHAKAR</TableCell>
-                <TableCell align="right">{data.spchakar}</TableCell>
+                <TableCell className={classes.cell} align="left">S. P. CHAKAR</TableCell>
+                <TableCell className={classes.cell} align="right">{data.spchakar}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">DIGRI</TableCell>
-                <TableCell align="right">{data.digri}</TableCell>
+                <TableCell className={classes.cell} align="left">DIGRI</TableCell>
+                <TableCell className={classes.cell} align="right">{data.digri}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">KHIPRO</TableCell>
-                <TableCell align="right">{data.khipro}</TableCell>
+                <TableCell className={classes.cell} align="left">KHIPRO</TableCell>
+                <TableCell className={classes.cell} align="right">{data.khipro}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">SAMARO</TableCell>
-                <TableCell align="right">{data.samaro}</TableCell>
+                <TableCell className={classes.cell} align="left">SAMARO</TableCell>
+                <TableCell className={classes.cell} align="right">{data.samaro}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell align="left">KUNRI</TableCell>
-                <TableCell align="right">{data.kunri}</TableCell>
+                <TableCell className={classes.cell} align="left">KUNRI</TableCell>
+                <TableCell className={classes.cell} align="right">{data.kunri}</TableCell>
               </TableRow>
             </TableBody>
           </Table>

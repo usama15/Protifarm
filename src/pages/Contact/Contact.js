@@ -12,18 +12,27 @@ export const Contact = () => {
 
 
     const submit = () =>{
-         fb.firestore().collection('contect').doc().set({
-          email: email,
-          contact: contact,
-          message: message,
-             name: name,
-             date: new Date(),
-      }).then(alert('Contect Send')).then({
-             setMessage: setMessage(''),
-             setContact: setContact(''),
-             setEmail: setEmail(''),
-             setName: setName(''),
-         })
+        if (email === "" || contact === "" || message === "" || name === "") {
+            alert("Please fill all field");
+          } else if(email !== "" || contact !== "" || message !== "" || name !== "") {
+            fb.firestore()
+              .collection("contect")
+              .doc()
+              .set({
+                email: email,
+                contact: contact,
+                message: message,
+                name: name,
+                date: new Date(),
+              })
+              .then(alert("Contect Send"))
+              .then({
+                setMessage: setMessage(""),
+                setContact: setContact(""),
+                setEmail: setEmail(""),
+                setName: setName(""),
+              });
+          }
     }
     return (
         <div>

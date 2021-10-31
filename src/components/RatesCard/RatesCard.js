@@ -22,8 +22,8 @@ const useStyles = makeStyles({
     marginTop: "5%",
     marginBottom: "5%",
   },
-  cell:{
-    fontWeight:'bold',
+  cell: {
+    fontWeight: 'bold',
   },
 });
 
@@ -42,82 +42,86 @@ function RatesCard(props) {
       });
   }, []);
   const data = post.sort((a, b) => (a.date < b.date ? 1 : -1));
-  const dt = new Date().getDate();
+  const dt = new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+  }).split(' ').join('-');
   console.log(dt);
   return (
     <div className={classes.main}>
       {data.map((data) =>
-        data.dt == dt ? (
+        data.date == dt ? (
           <TableContainer className={classes.tb} component={Paper}>
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">{data.date}</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.type}</TableCell>
+                  <TableCell className={classes.cell} align="left">{data.date}</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.type}</TableCell>
                 </TableRow>
               </TableHead>
               <TableHead>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">City Name</TableCell>
-                  <TableCell className={classes.cell}  align="right">Rates</TableCell>
+                  <TableCell className={classes.cell} align="left">City Name</TableCell>
+                  <TableCell className={classes.cell} align="right">Rates</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">KARACHI</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.karachi}</TableCell>
+                  <TableCell className={classes.cell} align="left">KARACHI</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.karachi}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">VINDER</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.vinder}</TableCell>
+                  <TableCell className={classes.cell} align="left">VINDER</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.vinder}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">SUJAWAL</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.sujawal}</TableCell>
+                  <TableCell className={classes.cell} align="left">SUJAWAL</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.sujawal}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">GOLARCHI</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.golarchi}</TableCell>
+                  <TableCell className={classes.cell} align="left">GOLARCHI</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.golarchi}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className={classes.cell} align="left">HYDERABAD</TableCell>
                   <TableCell className={classes.cell} align="right">{data.hyderabad}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">BADIN</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.badin}</TableCell>
+                  <TableCell className={classes.cell} align="left">BADIN</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.badin}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">T.ALLHAYAR</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.tallhayar}</TableCell>
+                  <TableCell className={classes.cell} align="left">T.ALLHAYAR</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.tallhayar}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">M. P. KHAS</TableCell>
+                  <TableCell className={classes.cell} align="left">M. P. KHAS</TableCell>
                   <TableCell className={classes.cell} align="right">{data.mpkhas}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">NAWAB SHAH</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.nawabshah}</TableCell>
+                  <TableCell className={classes.cell} align="left">NAWAB SHAH</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.nawabshah}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">S. P. CHAKAR</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.spchakar}</TableCell>
+                  <TableCell className={classes.cell} align="left">S. P. CHAKAR</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.spchakar}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">DIGRI</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.digri}</TableCell>
+                  <TableCell className={classes.cell} align="left">DIGRI</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.digri}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">KHIPRO</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.khipro}</TableCell>
+                  <TableCell className={classes.cell} align="left">KHIPRO</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.khipro}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">SAMARO</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.samaro}</TableCell>
+                  <TableCell className={classes.cell} align="left">SAMARO</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.samaro}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={classes.cell}  align="left">KUNRI</TableCell>
-                  <TableCell className={classes.cell}  align="right">{data.kunri}</TableCell>
+                  <TableCell className={classes.cell} align="left">KUNRI</TableCell>
+                  <TableCell className={classes.cell} align="right">{data.kunri}</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

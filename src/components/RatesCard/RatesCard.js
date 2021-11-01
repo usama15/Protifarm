@@ -51,7 +51,7 @@ function RatesCard(props) {
   return (
     <div className={classes.main}>
       {data.map((data) =>
-        data.date == dt ? (
+         (
           <TableContainer className={classes.tb} component={Paper}>
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
@@ -126,7 +126,7 @@ function RatesCard(props) {
               </TableBody>
             </Table>
           </TableContainer>
-        ) : null
+        )
       )}
     </div>
   );

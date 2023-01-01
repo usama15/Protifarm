@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { Footer } from './components/Footer/Footer';
 import Nav from './components/Navbar/NavBar';
 import { Intro } from './components/Intro/Intro';
+import SearchVehicles from './pages/SearchVehicles/searchVehicles';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Switch>
         <Route exact path='/'><Home /></Route>
         <Route exact path='/rates'><Rates /></Route>
+        <Route exact path='/searchvehicles'><SearchVehicles /></Route>
         <Route exact path='/contact' ><Contact /></Route>
       </Switch>
     </Router>

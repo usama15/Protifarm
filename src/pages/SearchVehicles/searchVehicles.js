@@ -47,6 +47,10 @@ function SearchVehicles() {
   }, []);
   const data = post.sort((a, b) => (a.date < b.date ? 1 : -1));
 
+  const filterData = data.filter((val) => {
+    return val.chessisNumber == search;
+  });
+
   return (
     <div>
       <div className={classes.main}>
@@ -70,58 +74,96 @@ function SearchVehicles() {
             Search
           </Button>
         </div>
-        {data
-          .filter((data) => {
-            if (search == "") {
-              return data;
-            } else if (data?.chessisNumber.include(search)) {
-              return data;
-            }
-          })
-          .map((data) => (
-            <TableContainer className={classes.tb} component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      {data.date}
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                      {data.type}
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableHead>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      Vehicles
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                      Numbers
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      CHESSISNUMBER
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                      {data.chessisNumber}
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      ENGINENUMBER
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                      {data.engineNumber}
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
-          ))}
+
+        {filterData.length > 0
+          ? filterData.map((val) => (
+              <TableContainer className={classes.tb} component={Paper}>
+                <Table className={classes.table} aria-label="simple table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        {val.date}
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        {val.type}
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        Vehicles
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        Numbers
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        CHESSISNUMBER
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        {val.chessisNumber}
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        ENGINENUMBER
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        {val.engineNumber}
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            ))
+          : data.map((val) => (
+              <TableContainer className={classes.tb} component={Paper}>
+                <Table className={classes.table} aria-label="simple table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        {val.date}
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        {val.type}
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        Vehicles
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        Numbers
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        CHESSISNUMBER
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        {val.chessisNumber}
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className={classes.cell} align="left">
+                        ENGINENUMBER
+                      </TableCell>
+                      <TableCell className={classes.cell} align="right">
+                        {val.engineNumber}
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            ))}
       </div>
       <Footer />
     </div>

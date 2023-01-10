@@ -95,7 +95,7 @@ function SearchVehicles() {
                         Vehicles
                       </TableCell>
                       <TableCell className={classes.cell} align="right">
-                        Numbers
+                        {val.tokenNumber}
                       </TableCell>
                     </TableRow>
                   </TableHead>
@@ -139,7 +139,7 @@ function SearchVehicles() {
                         Vehicles
                       </TableCell>
                       <TableCell className={classes.cell} align="right">
-                        Numbers
+                        {val.tokenNumber}
                       </TableCell>
                     </TableRow>
                   </TableHead>

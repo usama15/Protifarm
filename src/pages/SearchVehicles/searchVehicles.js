@@ -77,93 +77,125 @@ function SearchVehicles() {
 
         {filterData.length > 0
           ? filterData.map((val) => (
-              <TableContainer className={classes.tb} component={Paper}>
-                <Table className={classes.table} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        {val.date}
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.type}
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableHead>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        Vehicles
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.tokenNumber}
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        CHESSISNUMBER
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.chessisNumber}
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        ENGINENUMBER
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.engineNumber}
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            ))
+            <TableContainer className={classes.tb} component={Paper}>
+              <Table className={classes.table} aria-label="simple table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      {val.date}
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.type}
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableHead>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Vehicles
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.tokenNumber}
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      CHESSISNUMBER
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.chessisNumber}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      ENGINENUMBER
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.engineNumber}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Owner
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val?.owner}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Serial Number
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val?.serialNumber}
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+          ))
           : data.map((val) => (
-              <TableContainer className={classes.tb} component={Paper}>
-                <Table className={classes.table} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        {val.date}
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.type}
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableHead>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        Vehicles
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.tokenNumber}
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        CHESSISNUMBER
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.chessisNumber}
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className={classes.cell} align="left">
-                        ENGINENUMBER
-                      </TableCell>
-                      <TableCell className={classes.cell} align="right">
-                        {val.engineNumber}
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            ))}
+            <TableContainer className={classes.tb} component={Paper}>
+              <Table className={classes.table} aria-label="simple table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      {val.date}
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.type}
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableHead>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Vehicles
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.tokenNumber}
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      CHESSISNUMBER
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.chessisNumber}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      ENGINENUMBER
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.engineNumber}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Owner
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val?.owner}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Serial Number
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val?.serialNumber}
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+          ))}
       </div>
       <Footer />
     </div>

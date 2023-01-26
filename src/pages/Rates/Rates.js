@@ -53,16 +53,12 @@ function Rates() {
       {data.map((data) => (
         <TableContainer className={classes.tb} component={Paper}>
           <Table className={classes.table} aria-label="simple table">
+            
             <TableHead>
-              <TableRow>
-                <TableCell className={classes.cell} align="left">{data.date}</TableCell>
-                <TableCell className={classes.cell} align="right">{data.type}</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableHead>
-              <TableRow>
-                <TableCell className={classes.cell} align="left">City Name</TableCell>
-                <TableCell className={classes.cell} align="right">Rates</TableCell>
+              <TableRow style={{backgroundColor: "#cc0000"}}>
+                <TableCell className={classes.cell} align="left" style={{color:"#f2f2f2"}}>City Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {data.date}</TableCell>
+
+                <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2"}}>Confirm Rates</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

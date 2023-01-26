@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
   main: {
     width: "62%",
-    marginLeft: "15%",
+    marginLeft: "20%",
   },
 
   tb: {
@@ -70,7 +70,7 @@ function SearchVehicles() {
               setSearch(text.target.value);
             }}
           />
-          <Button className="btn" color="primary" variant="contained">
+          <Button className="btn" style={{background:"#cc0000" }} variant="contained">
             Search
           </Button>
         </div>
@@ -81,44 +81,18 @@ function SearchVehicles() {
               <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      {val.date}
+                    <TableCell className={classes.cell} align="left"  style={{color:"#f2f2f2" , background:"#cc0000"}}>
+                      {val.date} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {val?.serialNumber}
                     </TableCell>
-                    <TableCell className={classes.cell} align="right">
+                    <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2" , background:"#cc0000"}}>
                       {val.type}
                     </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableHead>
-                  <TableRow>
+                <TableRow>
                     <TableCell className={classes.cell} align="left">
-                      Vehicles
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                      {val.tokenNumber}
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      CHESSISNUMBER
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                      {val.chessisNumber}
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      ENGINENUMBER
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                      {val.engineNumber}
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      Owner
+                      Owner Name 
                     </TableCell>
                     <TableCell className={classes.cell} align="right">
                       {val?.owner}
@@ -129,9 +103,38 @@ function SearchVehicles() {
                       Serial Number
                     </TableCell>
                     <TableCell className={classes.cell} align="right">
-                      {val?.serialNumber}
+                    {val?.serialNumber}
                     </TableCell>
                   </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Vehicle Number
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.tokenNumber}
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Chessis Number
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.chessisNumber}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.cell} align="left">
+                      Engine Number
+                    </TableCell>
+                    <TableCell className={classes.cell} align="right">
+                      {val.engineNumber}
+                    </TableCell>
+                  </TableRow>
+                  
+                   
                 </TableBody>
               </Table>
             </TableContainer>

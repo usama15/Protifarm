@@ -20,7 +20,7 @@ export const Home = () => {
                 {/*    <RatesCard date="1st August 2021" />*/}
                 {/*</div>*/}
             </div>
-            <p>For more previous rates,<Link to="/rates"><span>Click here</span></Link></p>
+            <p style={{color:"#cc0000" }}>For more previous rates,<Link to="/rates" ><span style={{color:"#cc0000" }}>Click here</span></Link></p>
       <Footer />
 
         </div>

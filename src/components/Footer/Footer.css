@@ -1,15 +1,21 @@
 a {
     color: black;
+    size: 80px;
 }
 
 .column-footer i {
     margin: 10px 10px 0px 0px;
-    color: #0c0e0c;
+    color: #cc0000;
 
+}
+.btn
+{
+   
+    color: white !important;
 }
 
 .column-footer {
-    color: #27911a;
+    color: blue;
 }
 
 .footer {
@@ -57,6 +63,8 @@ a {
     width: 80%;
     margin: 10px auto;
     text-align: center;
+    font-weight: 600;
+    font-size: large;
 }
 
 /* Remove extra left and right margins, due to padding */

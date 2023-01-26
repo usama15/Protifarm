@@ -44,13 +44,13 @@ export const Footer = () => {
             social media platforms
           </h3>
           <a href="">
-            <i className="fab fa-facebook-f" />
+            <i className="fab fa-facebook-f" style={{color:"blue"}} />
           </a>
           <a href="">
-            <i className="fas fa-address-card" />
+            <i className="fas fa-address-card" style={{color:"blue"}}/>
           </a>
           <a href="">
-            <i className="fas fa-phone" />
+            <i className="fas fa-phone" style={{color:"blue"}}/>
           </a>
         </div>
         <div className="column-footer">

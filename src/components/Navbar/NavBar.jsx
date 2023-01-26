@@ -12,7 +12,7 @@ import {
   ListItemText
 } from '@material-ui/core';
 
-import image from "../../assets/logo.png"
+import image from "../../assets/WebsiteLogo.jpg"
 import './Nav.css'
 
 import MenuIcon from '@material-ui/icons/Menu';
@@ -142,12 +142,12 @@ export default function PrimarySearchAppBar() {
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/searchvehicles" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} id="about"><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-dollar-sign icon"/>Search vehicles</Typography></ListItemText>
+                  <ListItemText className={classes.linkText} id="about"><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-truck icon"/>Search vehicles</Typography></ListItemText>
                 </Link>
               </ListItemText>
               <ListItemText className={classes.listItem} onClick={closeOnMobileMenu}>
                 <Link to="/contact" className={classes.listItemLink}>
-                  <ListItemText className={classes.linkText} id="contact"><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-phone icon"/>Contact</Typography></ListItemText>
+                  <ListItemText className={classes.linkText} id="contact"><Typography className={classes.title} variant="h6" noWrap><i className="fas fa-phone-alt icon"/>Contact</Typography></ListItemText>
                 </Link>
               </ListItemText>
             </List>

@@ -22,11 +22,15 @@ const useStyles = makeStyles({
   main: {
     width: "100%",
     marginLeft: "15%",
-    ['@media (min-width:376px)']: { // eslint-disable-line no-useless-computed-key
-      width: '370px',
-      marginLeft: "2%"
+    ['@media (min-width:300px)']: { // eslint-disable-line no-useless-computed-key
+      width: '344px',
+      marginLeft: "1%"
     },
     
+    ['@media (min-width:485px)']: { // eslint-disable-line no-useless-computed-key
+      width: '75%',
+      marginLeft: "12%"
+    },
    
   },
 
@@ -69,7 +73,7 @@ function Rates() {
             
             <TableHead>
               <TableRow style={{backgroundColor: "#cc0000"}}>
-                <TableCell className={classes.cell} align="left" style={{color:"#f2f2f2"}}>City Name &nbsp;  | &nbsp; Date: '{data.date}'' </TableCell>
+                <TableCell className={classes.cell} align="left" style={{color:"#f2f2f2"}}>City Name | Date: '{data.date}'' </TableCell>
 
                 <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2"}}> | Confirm Rates</TableCell>
               </TableRow>

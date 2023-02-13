@@ -17,10 +17,20 @@ const useStyles = makeStyles({
     minWidth: 100,
     tableLayout:"fixed",
     whiteSpace:"nowrap",
+   
   },
   main: {
-    width: "62%",
+    width: "100%",
     marginLeft: "15%",
+    ['@media (min-width:376px)']: { // eslint-disable-line no-useless-computed-key
+      width: '360px',
+      marginLeft: "2%"
+    },
+    ['@media (min-width:485px)']: { // eslint-disable-line no-useless-computed-key
+      width: '75%',
+      marginLeft: "12%"
+    },
+   
   },
 
   tb: {
@@ -33,6 +43,7 @@ const useStyles = makeStyles({
     fontWeight:'bold',
     flex:2,
   },
+  
 });
 
 function Rates() {

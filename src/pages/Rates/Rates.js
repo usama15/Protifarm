@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     width: "100%",
     marginLeft: "15%",
     ['@media (min-width:376px)']: { // eslint-disable-line no-useless-computed-key
-      width: '360px',
+      width: '370px',
       marginLeft: "2%"
     },
     ['@media (min-width:485px)']: { // eslint-disable-line no-useless-computed-key

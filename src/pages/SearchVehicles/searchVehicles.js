@@ -45,12 +45,22 @@ function SearchVehicles() {
         setPost(newPost);
       });
   }, []);
-  const data = post.sort((a, b) => (a.date < b.date ? 1 : -1));
-
+  const data = post.sort((a, b) => (a.serialNumber < b.serialNumber ? 1 : -1));
+    
+  
+  
   const filterData = data.filter((val) => {
-    return val.chessisNumber == search;
+    if(search === "")
+    {
+      return val.serialNumber;
+    }
+    else
+    {
+      return  search === val.serialNumber ;
+    }
+    
   });
-
+  
   return (
     <div>
       <div className={classes.main}>

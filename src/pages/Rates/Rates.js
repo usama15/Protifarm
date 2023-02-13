@@ -14,7 +14,9 @@ import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 150,
+    minWidth: 100,
+    tableLayout:"fixed",
+    whiteSpace:"nowrap",
   },
   main: {
     width: "62%",
@@ -24,10 +26,12 @@ const useStyles = makeStyles({
   tb: {
     marginTop: "5%",
     marginBottom: "5%",
+    
    
   },
   cell:{
     fontWeight:'bold',
+    flex:2,
   },
 });
 
@@ -48,17 +52,18 @@ function Rates() {
   const data = post.sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
-    <div>
+    <div >
     <div className={classes.main}>
       {data.map((data) => (
+        
         <TableContainer className={classes.tb} component={Paper}>
           <Table className={classes.table} aria-label="simple table">
             
             <TableHead>
               <TableRow style={{backgroundColor: "#cc0000"}}>
-                <TableCell className={classes.cell} align="left" style={{color:"#f2f2f2"}}>City Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {data.date}</TableCell>
+                <TableCell className={classes.cell} align="left" style={{color:"#f2f2f2"}}>City Name &nbsp;  | &nbsp; Date: '{data.date}'' </TableCell>
 
-                <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2"}}>Confirm Rates</TableCell>
+                <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2"}}> | Confirm Rates</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

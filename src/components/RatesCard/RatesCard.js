@@ -14,8 +14,18 @@ const useStyles = makeStyles({
     minWidth: 150,
   },
   main: {
-    width: "62%",
-    marginLeft: "20%",
+    
+    width: "100%",
+    marginLeft: "15%",
+    ['@media (min-width:300px)']: { // eslint-disable-line no-useless-computed-key
+      width: '344px',
+      marginLeft: "1%"
+    },
+    
+    ['@media (min-width:485px)']: { // eslint-disable-line no-useless-computed-key
+      width: '75%',
+      marginLeft: "12%"
+    },
   },
 
   tb: {
@@ -56,8 +66,8 @@ function RatesCard(props) {
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow style={{backgroundColor: "#cc0000" }}>
-                  <TableCell className={classes.cell}  align="left" style={{color:"#f2f2f2"}}>City Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {data.date}</TableCell>
-                  <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2"}}>Confirm Rates</TableCell>
+                <TableCell className={classes.cell} align="left" style={{color:"#f2f2f2"}}>City Name | Date: '{data.date}'' </TableCell>
+                <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2"}}> |Confirm Rates|</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

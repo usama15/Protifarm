@@ -73,7 +73,7 @@ function SearchVehicles() {
         >
           <TextField
             id="standard-basic"
-            label="Chessis NO"
+            label="Serial No"
             variant="standard"
             style={{ width: "70%" }}
             onChange={(text) => {
@@ -92,10 +92,10 @@ function SearchVehicles() {
                 <TableHead>
                   <TableRow>
                     <TableCell className={classes.cell} align="left"  style={{color:"#f2f2f2" , background:"#cc0000"}}>
-                      {val.date} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {val?.serialNumber}
+                      {val.date} 
                     </TableCell>
-                    <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2" , background:"#cc0000"}}>
-                      {val.type}
+                    <TableCell className={classes.cell} align="right" style={{color:"#f2f2f2" , background:"#cc0000"}}> Serial Number: 0
+                    {val?.serialNumber}
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -108,14 +108,7 @@ function SearchVehicles() {
                       {val?.owner}
                     </TableCell>
                   </TableRow>
-                  <TableRow>
-                    <TableCell className={classes.cell} align="left">
-                      Serial Number
-                    </TableCell>
-                    <TableCell className={classes.cell} align="right">
-                    {val?.serialNumber}
-                    </TableCell>
-                  </TableRow>
+                  
                   <TableRow>
                     <TableCell className={classes.cell} align="left">
                       Vehicle Number
